@@ -522,8 +522,9 @@ ul {
     font-weight: 900;
     margin-bottom: 50px;
 }
-.contact .content-left ul li {
-    display: inline-block;
+
+.contact .content-left span {
+    /* display: inline-block; */
     margin-right: 40px;
 }
 .contact .content-left ul li a i {
