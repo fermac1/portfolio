@@ -218,7 +218,7 @@ ul {
     -webkit-text-fill-color: transparent;
     line-height: 87px;
 }
-.home-intro h3{
+.home-intro span{
     font-weight: 500;
     font-size: 20px;
     color: #336B87;
