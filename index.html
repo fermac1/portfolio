@@ -354,7 +354,13 @@
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="content-right">
+<<<<<<< HEAD
                             <form action="contact-form.php" class="contact-form" id="contact-form" method="post" data-netlify="true">
+=======
+                            <form name="contact" class="contact-form" id="contact-form" method="POST">
+                               
+
+>>>>>>> 9d0afef2c11e506a099b3671ebe9a4c19eb9316e
                                 <div class="row">
                                     <div class="col">
                                         <div id="first-name-field">
@@ -400,9 +406,38 @@
     <script src="js/jquery.filterizr.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
+<<<<<<< HEAD
     <!-- <script src="js/contact-form.js"></script> -->
+=======
+
+>>>>>>> 9d0afef2c11e506a099b3671ebe9a4c19eb9316e
     <script src="js/main.js"></script>
 
+    <script>
+        function encode(data) {
+  return Object.keys(data)
+    .map(
+      (key) =>
+        encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+    )
+    .join("&");
+}
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({
+      "form-name": event.target.getAttribute("name"),
+      ...name,
+    }),
+  })
+    .then(() => navigate("/thank-you/"))
+    .catch((error) => alert(error));
+};
+
+    </script>
 
 </body>
 
